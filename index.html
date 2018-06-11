@@ -384,7 +384,8 @@
                     <div class="t554__card t-width_5 t-align_left t-animate" data-animate-style="zoomin"
                          style=" top:120px;">
                         <div class="t554__title t-heading t-heading_sm" style="" field="title">Чортові Скелі</div>
-                        <div class="t-text t-descr_sm" style="" field="text"><b>Маршрутка №10</b><br/><br/>Або 20 хвилин на ровері
+                        <div class="t-text t-descr_sm" style="" field="text"><b>Маршрутка №10</b><br/><br/>Або 20 хвилин
+                            на ровері
                         </div>
                     </div>
                 </div>
@@ -393,38 +394,25 @@
                          data-map-y="40.7127837" data-map-zoom="14" data-map-title="Чортові Скелі"
                          style="width:100%; height:600px;"
                          data-map-style='[{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}]'></div>
-<!--                     <script type="text/javascript"> var arMapMarkers56529971 = [{
-                        title: "Чортові Скелі",
-                        descr: "",
-                        lat: "49.828359",
-                        lng: "24.117601",
-                    },];
-                    $(document).ready(function () {
-                        t_appendGoogleMap("56529971", "");
-                    });</script>
+
+                    <script>
+                        function initMap() {
+                            var uluru = {title: "Чортові Скелі", lat: 49.828359, lng: 24.117601};
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 14,
+                                center: uluru
+                            });
+                            var marker = new google.maps.Marker({
+                                position: uluru,
+                                map: map
+                            });
+                        }
+                    </script>
+
                     <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWBawAgdSftU_gwmU6nA5al9lQgYnAFYg&callback=initMap">
-                  </script> -->
-               
-                    
-                    <script>     
-            function initMap() {
-            var uluru = {title: "Чортові Скелі", lat: 49.828359, lng: 24.117601};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 10,
-              center: uluru
-          });
-          var marker = new google.maps.Marker({
-            position: uluru,
-           map: map
-             });
-      }
-    </script>
-                    
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmYGoTjzSevPrnd042GZ-XeOBR6dJvhSY&callback=initMap">
-    </script>
-                    
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmYGoTjzSevPrnd042GZ-XeOBR6dJvhSY&callback=initMap">
+                    </script>
+
                 </div>
             </div>
         </div>
